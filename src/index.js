@@ -36,7 +36,7 @@ import JFetch from "https://cdn.jsdelivr.net/npm/fetch-jsonp-es6@1.0.7/src/fetch
 }
    var Hex = genhex();
    var JSONDict;
-   JFetch('./_dict.json')
+   JFetch('https://raw.githubusercontent.com/LuxDigitalSecurity/LSEA/main/src/_dict.json')
   .then(function(response) {
      JSONDict = response.json()
   })
