@@ -40,7 +40,7 @@ import JFetch from "https://cdn.jsdelivr.net/npm/fetch-jsonp-es6@1.0.7/src/fetch
   .then(function(response) {
      JSONDict = response.json()
   })
-   document.write(JSONDict)
+   return JSONDict
         
     }
     
