@@ -1,5 +1,5 @@
 import CryptoJS from "https://cdn.jsdelivr.net/npm/crypto-es/lib/index.js"
-import JFetch from "https://cdn.jsdelivr.net/npm/fetch-jsonp-es6@1.0.7/src/fetch-jsonp.js"
+import JSONDict from "./jsondict.js"
     var LSEA = {}
       
     LSEA.Encrypt = function(string, key) {
@@ -35,13 +35,8 @@ import JFetch from "https://cdn.jsdelivr.net/npm/fetch-jsonp-es6@1.0.7/src/fetch
         return hex;
 }
    var Hex = genhex();
-   var JSONDict;
-   JFetch('https://raw.githubusercontent.com/LuxDigitalSecurity/LSEA/main/src/_dict.json')
-  .then(function(response) {
-     JSONDict = response.json()
-  })
-   return JSONDict
-        
+   
+        return JSONDict.toString();
     }
     
     export default LSEA
